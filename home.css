@@ -1,0 +1,655 @@
+/* ==========================
+   RESET & BASE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, nav a, .buy-btn, .hero-text, .instagram-btn {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1.5px;
+}
+
+/* ==========================
+   HEADER
+========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  animation: pulseLogo 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulseLogo {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+  100% { transform: scale(1.05); box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff3333;
+  transform: scale(1.1);
+}
+
+.search-bar {
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 8px 16px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+
+.search-bar input::placeholder {
+  color: #999;
+}
+
+/* ==========================
+   BANNER
+========================== */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: url('download1.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.banner-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  max-width: 1000px;
+  padding: 40px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  animation: slideUp 1.5s ease forwards;
+}
+
+.banner-content p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.banner-btn {
+  background-color: #fff;
+  color: #000;
+  padding: 12px 40px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ==========================
+   HERO
+========================== */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  background: #fff;
+}
+
+.hero-text {
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px 40px;
+  border: 2px solid #000;
+  animation: floatUp 2s ease-in-out infinite alternate;
+}
+
+/* ==========================
+   PRODUCTS
+========================== */
+.products {
+  padding: 80px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+.product-card {
+  text-align: center;
+  max-width: 320px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.product-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.product-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.product-info .price {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.buy-btn {
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.buy-btn:hover {
+  background-color: #cc0000;
+  transform: translateY(-3px);
+}
+
+/* ==========================
+   INSTAGRAM SECTION
+========================== */
+.instagram {
+  position: relative;
+  height: 600px;
+  background: url('https://via.placeholder.com/1920x800/000033/FF0033?text=Vault+Street+Movement') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 80px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.instagram::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 70%);
+  z-index: 1;
+}
+
+.instagram-btn {
+  background-color: #ff3333;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 2;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.instagram-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-20deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+.instagram p {
+  z-index: 2;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+  color: #666;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+/* ==========================
+   MODAL (POPUP)
+========================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: pop 0.3s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.order-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.order-btn:hover {
+  background: #333;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================
+   ANIMACIONES
+========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .banner-content h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+  .logo {
+    margin-bottom: 15px;
+  }
+  nav {
+    margin: 15px 0;
+    gap: 20px;
+  }
+  .search-bar {
+    width: 100%;
+    max-width: 300px;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .instagram p {
+    font-size: 16px;
+  }
+}
+/* ==== MODAL DE PEDIDO ==== */
+.modal-content.pedido {
+  max-width: 450px;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.order-form label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.order-form input,
+.order-form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+.campos-extra {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+/* === MODAL CREAR CUENTA === */
+.modal:target {
+  display: flex;
+}
+
+.register-box {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+  animation: fadeIn 0.4s ease;
+}
+
+.register-box h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.register-box p {
+  color: #bbb;
+  margin-bottom: 1.5rem;
+}
+
+.register-box label {
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.register-box input {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.register-box input::placeholder {
+  color: #ccc;
+}
+
+.btn-registrar-form {
+  width: 100%;
+  padding: 0.8rem;
+  background: #ff0066;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-registrar-form:hover {
+  background: #ff3385;
+}
+
+.login-link {
+  margin-top: 1rem;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #ff0066;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Botón del header */
+.btn-registrar {
+  background: #ff0066;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-registrar:hover {
+  background: #ff3385;
+}
+
+/* Fondo del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cerrar modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.campos-extra label {
+  margin-top: 8px;
+  display: block;
+}
+
+.campos-extra input {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+
+.order-form input:focus,
+.order-form select:focus {
+  border-color: #000;
+}
+
+.order-form button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 0;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.order-form button:hover {
+  background: #333;
+}
+

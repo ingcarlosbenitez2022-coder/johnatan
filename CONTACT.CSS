@@ -1,0 +1,673 @@
+/* ================
+   VAULT STREET CONTACT — PREMIUM STREETWEAR STYLE
+   ================= */
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #000;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #000;
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  transition: 0.2s ease;
+}
+
+.header nav ul li a:hover {
+  opacity: 0.5;
+}
+
+.search {
+  padding: 7px 12px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* CONTACT CARD */
+.contact-container {
+  max-width: 750px;
+  margin: 70px auto;
+  text-align: center;
+}
+
+.vs-title {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.vs-sub {
+  font-size: 16px;
+  margin-bottom: 40px;
+  opacity: 0.7;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid #000;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+}
+/* NAV BAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  background: #000; /* Fondo oscuro para que las letras blancas se vean duras */
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #cfcfcf;
+}
+
+.search-bar {
+  padding: 7px 12px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+}
+
+.search-bar::placeholder {
+  color: #ddd;
+}
+
+/* BOTÓN MÓVIL */
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* MENU MÓVIL */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: #000;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-mobile a {
+  padding: 12px 0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+/* CAROUSEL */
+.carousel {
+  width: 90%;
+  max-width: 850px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+}
+
+.slides {
+  width: 400%;
+  height: 350px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Movement */
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+#slide3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+#slide4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+/* Navigation buttons */
+.navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bar {
+  width: 13px;
+  height: 13px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bar:hover {
+  background: white;
+}
+
+
+.nav-mobile a:hover {
+  color: #ccc;
+}
+.vs-btn {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.vs-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.nav-mobile.open {
+  display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .nav-links,
+  .search-bar {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+.vs-audio {
+  width: 300px;
+  margin: 20px auto;
+  display: block;
+  filter: invert(1);
+}
+
+
+.contact-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.vs-desc {
+  font-size: 14px;
+  max-width: 500px;
+  margin: 20px auto;
+  opacity: 0.8;
+}
+
+.vs-quote {
+  font-style: italic;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.contact-info {
+  margin-top: 25px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.vs-end {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 25px;
+}
+
+.vs-final {
+  margin-top: 18px;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+/* DIVIDER */
+.divider {
+  width: 80%;
+  margin: 70px auto;
+  border: none;
+  border-top: 1px solid #000;
+}
+
+/* ATHLETES */
+.athletes-section {
+  padding: 20px 0 80px;
+}
+
+.athletes-title {
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.athletes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.athlete {
+  width: 270px;
+  transition: 0.3s ease;
+}
+
+.athlete img {
+  width: 100%;
+  border-radius: 15px;
+  filter: grayscale(0.1);
+  transition: 0.3s ease;
+}
+
+.athlete:hover img {
+  transform: scale(1.04);
+  filter: grayscale(0);
+}
+
+.athlete h3 {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.athlete p {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* FOOTER */
+footer {
+  padding: 50px 0;
+  border-top: 1px solid #000;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+footer .stars {
+  font-size: 20px;
+  margin: 10px 0;
+}
+/* ============================
+   VAULT STREET — STREETWEAR MODE
+============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap');
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+/* ============================
+   HEADER
+============================= */
+.header {
+  width: 100%;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  z-index: 30;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 38px;
+  letter-spacing: 3px;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.header ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.header ul li a:hover {
+  opacity: 0.5;
+}
+
+.search {
+  padding: 7px 14px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+}
+
+/* ============================
+   CONTACT MAIN
+============================= */
+.contact-container {
+  padding-top: 160px;
+}
+
+.vs-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  letter-spacing: 4px;
+}
+
+.vs-sub {
+  color: #aaa;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.contact-card {
+  max-width: 750px;
+  margin: auto;
+  background: #0b0b0b;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 25px rgba(255,255,255,0.05);
+}
+
+.contact-card h2 {
+  font-family: 'Bebas Neue';
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.vs-desc {
+  color: #bbb;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.vs-quote {
+  font-size: 22px;
+  margin: 20px 0;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.contact-info {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.info-item {
+  background: #111;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.vs-end {
+  margin-top: 30px;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.vs-final {
+  margin-top: 10px;
+  font-size: 28px;
+  font-family: 'Bebas Neue';
+}
+
+/* ============================
+   DIVIDER
+============================= */
+.divider {
+  width: 80%;
+  margin: 60px auto;
+  opacity: 0.1;
+}
+
+/* ============================
+   ATHLETES
+============================= */
+.athletes-title {
+  font-family: 'Bebas Neue';
+  font-size: 60px;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+.athletes-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.athlete {
+  width: 260px;
+  background: #0d0d0d;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s ease;
+}
+
+.athlete img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.athlete:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+}
+
+.athlete:hover img {
+  filter: brightness(120%);
+}
+
+/* ============================
+   TEAM SECTION
+============================= */
+.team {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.team .member {
+  width: 240px;
+}
+
+.team .member img {
+  width: 100%;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.team .member:hover img {
+  transform: scale(1.05);
+  filter: brightness(110%);
+}
+
+/* ============================
+   FOOTER
+============================= */
+footer {
+  padding: 50px 0;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer p {
+  color: #aaa;
+}
+
+footer .stars {
+  margin: 15px 0;
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+.valley {
+  font-family: 'Bebas Neue';
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.copy {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+footer .valley {
+  font-size: 34px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+footer .copy {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .header {
+    padding: 15px 20px;
+  }
+  .contact-card {
+    padding: 25px;
+  }
+  .athletes-grid {
+    gap: 25px;
+  }
+  
+}
