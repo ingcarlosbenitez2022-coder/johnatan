@@ -1,0 +1,24 @@
+{
+  "name": "proyecto-vercel",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node organizador.js"
+  },
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingcarlosbenitez2022-coder/johnatan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ingcarlosbenitez2022-coder/johnatan/issues"
+  },
+  "homepage": "https://github.com/ingcarlosbenitez2022-coder/johnatan#readme"
+}
